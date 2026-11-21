@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Civic Triage Desk</title>
+<link rel="stylesheet" href="./style.css">
+<header><div><strong>CIVIC TRIAGE DESK</strong><h1>One incident.<br>A clearer queue.</h1><p>Review municipal complaints in English and Kannada.</p></div><button id="reset">Reset demo</button></header>
+<main>
+<section class="panel">
+  <h2>Match comparison</h2>
+  <p>Both methods use the same landmark and three-hour limit. Results below use 45 labeled pairs from 10 fictional reports.</p>
+  <div class="table"><table><thead><tr><th>Method</th><th>Found</th><th>Missed</th><th>False matches</th></tr></thead><tbody id="metrics"></tbody></table></div>
+</section>
+<div class="layout">
+  <section class="panel"><div class="section-title"><h2>Staff review</h2><label>View <select id="method"><option value="ai">AI classifier</option><option value="keyword">Keyword matching</option></select></label></div><p id="queue-info"></p><div id="queue"></div></section>
+  <aside>
+    <section class="panel"><h2>Approved incidents</h2><div id="groups"></div></section>
+    <section class="panel"><h2>Complaint register</h2>
+      <details><summary>Add a complaint</summary><form id="add">
+        <label>Landmark <input name="area" required maxlength="70" list="landmarks"></label>
+        <datalist id="landmarks"><option value="Library Gate"><option value="Market Junction"></datalist>
+        <label>Hour today (0–23 IST)<input name="hour" type="number" min="0" max="23" required></label>
+        <label>Complaint in English or Kannada<textarea name="text" required minlength="8" maxlength="500"></textarea></label>
+        <button type="submit">Add to queue</button>
+      </form></details><div id="reports"></div>
+    </section>
+  </aside>
+</div>
+<p id="notice" role="status"></p>
+</main>
+<script type="module" src="./app.mjs"></script>
+</html>
