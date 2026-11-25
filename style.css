@@ -1,1 +1,12 @@
 *{box-sizing:border-box}body{margin:0;background:#eff2f0;color:#152e2a;font:16px/1.55 system-ui}header{background:#12342e;color:#f6f8e9;padding:2.8rem max(5%,calc((100% - 1180px)/2));display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}header strong{letter-spacing:.13em;color:#bee6bb;font-size:.8rem}h1{font:clamp(2.5rem,7vw,5.5rem)/.99 Georgia;margin:.35em 0 .2em}h2{font:1.75rem Georgia;margin:0 0 .5rem}h3,p{margin:.35rem 0 .7rem}header p{color:#dcE8d9}main{max-width:1220px;margin:1.5rem auto;padding:0 20px}.panel{background:#fff;border:1px solid #d4ded9;border-radius:16px;padding:clamp(1rem,3vw,1.6rem);margin-bottom:1rem;min-width:0}.layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:1rem;align-items:start}.section-title,.actions{display:flex;align-items:center;flex-wrap:wrap;gap:.6rem}.section-title{justify-content:space-between}.table{overflow:auto}table{width:100%;border-collapse:collapse;text-align:left}th,td{padding:.48rem .5rem;border-bottom:1px solid #dae4df}thead{color:#45645a}.card{border:1px solid #d9e3dc;border-radius:12px;margin:.8rem 0;padding:1rem;overflow-wrap:anywhere}.evidence{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}.report{margin:0;padding:.65rem;background:#f0f5f1;border-radius:8px}.meta{display:block;color:#426359;font-size:.85rem;margin-bottom:.22rem}button,select,input,textarea{font:inherit;border:1px solid #759589;border-radius:8px;padding:.45rem .65rem;color:inherit;background:white}button{cursor:pointer;font-weight:650}button.primary{background:#1d573f;color:white}button:hover{outline:2px solid #8fc5aa}button:focus-visible,select:focus-visible{outline:3px solid #559974}details summary{cursor:pointer;font-weight:650}form label,input,textarea{display:block;width:100%;margin:.4rem 0}textarea{resize:vertical}#reports p{border-top:1px solid #d9e3dc;padding-top:.55rem;overflow-wrap:anywhere}#notice:not(:empty){position:fixed;bottom:0;right:1rem;padding:.6rem 1rem;background:#173d30;color:white;border-radius:8px;max-width:calc(100vw - 2rem)}@media(max-width:780px){.layout{grid-template-columns:1fr}}@media(max-width:460px){.evidence{grid-template-columns:1fr}}
+
+#reset {
+  color: #12342e;
+  background: #f6f8e9;
+  flex-shrink: 0;
+}
+#reset:hover { background: #bee6bb; }
+#reset:focus-visible { outline: 3px solid #bee6bb; outline-offset: 3px; }
+@media (max-width: 480px) {
+  header { flex-wrap: wrap; }
+}
